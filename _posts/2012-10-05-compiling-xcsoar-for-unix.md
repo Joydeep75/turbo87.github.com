@@ -13,6 +13,8 @@ To compile the Unix version of XCSoar you will have to enter `make TARGET=UNIX` 
 
     sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-ttf2.0-dev
 
+**Update:** with Ubuntu 12.10 this next step of adding the `SDL_ttf.pc` file is obsolete!
+
 Unfortunately the `libsdl-ttf2.0-dev` package in the Ubuntu 12.04 repository is slightly broken because it misses a `.pc` file, that `pkg-config` needs to determine whether the package is installed or not. To fix this we will have to create the file ourselves. Depending on your platform you may have to replace `i386` by `x86_64` in the following paths.
 
     sudo cp /usr/lib/i386-linux-gnu/pkgconfig/SDL_image.pc /usr/lib/i386-linux-gnu/pkgconfig/SDL_ttf.pc
